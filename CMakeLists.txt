@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.19)
 project(Simpato LANGUAGES CXX)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -13,7 +15,7 @@ qt_add_executable(Simpato
     src/main.cpp
     src/main_window.cpp
     src/main_window.h
-    assets/main_window.ui
+    src/main_window.ui
 )
 
 target_include_directories(Simpato PUBLIC src)
@@ -38,3 +40,4 @@ qt_generate_deploy_app_script(
     NO_UNSUPPORTED_PLATFORM_ERROR
 )
 install(SCRIPT ${deploy_script})
+
