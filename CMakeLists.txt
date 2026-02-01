@@ -16,6 +16,12 @@ qt_add_executable(Simpato
     src/main_window.cpp
     src/main_window.h
     src/main_window.ui
+    src/item_view.ui
+    src/item_view.h
+    src/item_view.cpp
+    src/note_view.ui
+    src/note_view.h
+    src/note_view.cpp
 )
 
 target_include_directories(Simpato PUBLIC src)
