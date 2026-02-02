@@ -19,6 +19,9 @@ public:
     ~itemView();
     QTextEdit *get_textView();
 
+signals:
+    void noteRmed();
+
 private:
     Ui::itemView *ui;
 

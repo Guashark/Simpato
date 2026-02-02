@@ -34,6 +34,8 @@ private slots:
 
     void on_downBtn_clicked();
 
+    void release_curr_ptr();
+
 private:
     Ui::MainWindow *ui;  
 };

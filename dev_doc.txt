@@ -1,25 +1,41 @@
-26/2/1 - 26/2/2(dev, no release)
-260202更新：
-1.添加
-主界面
-note界面（每个实例作为主界面下的一个note）
-主界面展示note
-添加/删除note功能
-上移/下移note功能
-选中note功能
-完成note功能
-修改note界面
-修改note功能
+260202-1(dev, no release) 26/2/1 - 26/2/2
+1.LMPL
+F 主界面
+F note界面(每个实例作为主界面下的一个note)
+F 主界面展示note
+F 添加/删除note功能
+F 上移/下移note功能
+F 选中note功能
+F 完成note功能
+F 修改note界面
+F 修改note功能
 
-2.删除
-无
+2.DEL
+/
 
-3.修改
-无
+3.FIX
+/
 
-4.已知问题/未完成功能
-!删除按钮可能导致程序崩溃（不能稳定复现）
-!多note时有概率无法正常编辑
-主界面暂不能highlight当前选中note
-修改界面不能继承已有note内容
-本地文件顺序读写（按序读取/存储note）
+4.BUG/FEATURE
+B FIX-20260202-2 删除按钮可能导致程序崩溃(不能稳定复现)
+B 多note时有概率无法正常编辑
+F 主界面highlight当前选中note
+F LMPL-20260202-2 修改界面继承已有note内容
+F 本地文件顺序读写(按序读取/存储note)
+
+260202-1(dev, no release) 26/2/2
+1.
+F 修改界面继承已有note内容
+
+
+2.
+/
+
+3.
+B 删除按钮可能导致程序崩溃(原因:使用完成功能删除当前note后未释放*curr_item.)
+
+4.
+B !多note时有概率无法正常编辑
+F 主界面暂不能highlight当前选中note
+F 本地文件顺序读写(按序读取/存储note)
+

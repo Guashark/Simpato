@@ -33,3 +33,8 @@ void noteView::on_dialBtns_accepted()
     std::string str = std::string(byteArr);
     std::cout << str << std::endl;
 }
+
+QTextEdit *noteView::get_editView()
+{
+    return ui->editView;
+}

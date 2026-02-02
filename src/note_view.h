@@ -2,6 +2,7 @@
 #define NOTE_VIEW_H
 
 #include <QWidget>
+#include <QTextEdit>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -17,6 +18,7 @@ public:
     noteView(QWidget *parent);
     ~noteView();
     QString edited_note = NULL;
+    QTextEdit *get_editView();
 
 private slots:
     void on_dialBtns_rejected();
