@@ -34,7 +34,7 @@ void itemView::mousePressEvent(QMouseEvent *event)
 void itemView::on_itemCheckBox_checkStateChanged(const Qt::CheckState &arg1)
 {
     this->deleteLater();
-    emit noteRmed();
+    emit noteRmed();    
 }
 
 QTextEdit *itemView::get_textView()

@@ -4,6 +4,16 @@
 #include <QMainWindow>
 #include "item_view.h"
 
+#include <QDir>
+#include <QString>
+#include <QDebug>
+#include <QRegularExpression>
+#include <vector>
+#include <QMap>
+
+#include <QFile>
+#include <QTextStream>
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -18,6 +28,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     itemView *curr_item = nullptr;
+
+    void process_notes(const QString folder_path);
 
 private slots:
     void select_item();
@@ -34,9 +46,14 @@ private slots:
 
     void on_downBtn_clicked();
 
-    void release_curr_ptr();
+    void rm_note();
 
 private:
-    Ui::MainWindow *ui;  
+    Ui::MainWindow *ui;
+
+    QMap<itemView *, int64_t> local_notes;
+    void create_item();
+    void release_curr_ptr();
+
 };
 #endif // MAIN_WINDOW_H
