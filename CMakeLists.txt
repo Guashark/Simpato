@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.19)
 project(Simpato LANGUAGES CXX)
 
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -47,4 +51,11 @@ qt_generate_deploy_app_script(
     NO_UNSUPPORTED_PLATFORM_ERROR
 )
 install(SCRIPT ${deploy_script})
+
+if(MSVC)
+    # 强制 MSVC 使用 UTF-8 编码读取和生成字符
+    add_compile_options(/utf-8)
+    # 启用更严格的符合性模式（更接近标准 C++）
+    add_compile_options(/permissive-)
+endif()
 
